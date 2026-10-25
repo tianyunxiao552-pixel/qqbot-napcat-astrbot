@@ -1,0 +1,8 @@
+name: qq_fallback_phrase
+display_name: QQ 拒答与答不上来的固定措辞
+desc: 将模型明确拒答或答不上来的表述统一为人格指定句子，并同步本轮上下文。
+author: Local
+version: 1.1.0
+support_platforms:
+  - aiocqhttp
+astrbot_version: '>=4.29.1'

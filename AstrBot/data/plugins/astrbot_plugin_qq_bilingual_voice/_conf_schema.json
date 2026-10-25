@@ -1,0 +1,26 @@
+{
+  "enabled": {
+    "description": "启用中文文字＋日语自动语音",
+    "type": "bool",
+    "default": false,
+    "hint": "按日语原句显示中文译文并自动配音。关闭后不再翻译或自动发语音，当前人格仍按日语回答。"
+  },
+  "tts_provider_id": {
+    "description": "AstrBot语音模型ID",
+    "type": "string",
+    "default": "hotaru_gsv_ja",
+    "hint": "使用原生GPT-SoVITS本地模型，不在此填写API Key。"
+  },
+  "translation_provider_id": {
+    "description": "中文翻译与语气判断模型ID",
+    "type": "string",
+    "default": "deepseek_flash",
+    "hint": "结合当前话题，把日语原句译成顺口中文，保留人格、原意和亲疏程度，同时判断原句的朗读语气。语音直接朗读原句。"
+  },
+  "emotion_references_path": {
+    "description": "情绪参考音频映射文件",
+    "type": "string",
+    "default": "",
+    "hint": "映射到分享包里的对应情绪参考，不填写则使用原生语音模型的默认参考。"
+  }
+}

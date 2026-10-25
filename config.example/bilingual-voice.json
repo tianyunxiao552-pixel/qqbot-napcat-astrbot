@@ -1,0 +1,6 @@
+{
+  "enabled": false,
+  "tts_provider_id": "hotaru_gsv_ja",
+  "translation_provider_id": "deepseek_flash",
+  "emotion_references_path": ""
+}

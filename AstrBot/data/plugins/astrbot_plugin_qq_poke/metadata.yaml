@@ -1,0 +1,8 @@
+name: qq_poke
+display_name: QQ 戳一戳人格回应
+desc: 将戳机器人的事件交给原生模型、人格和上下文处理，遵循会话白名单。
+author: Local
+version: 1.0.0
+support_platforms:
+  - aiocqhttp
+astrbot_version: '>=4.29.1'

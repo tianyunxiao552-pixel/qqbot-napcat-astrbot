@@ -1,0 +1,20 @@
+{
+  "network": {
+    "httpServers": [],
+    "httpClients": [],
+    "websocketServers": [],
+    "websocketClients": [
+      {
+        "name": "astrbot",
+        "enable": true,
+        "url": "ws://127.0.0.1:6199/ws",
+        "messagePostFormat": "array",
+        "reportSelfMessage": false,
+        "reconnectInterval": 3000,
+        "token": "REPLACE_WITH_YOUR_ONEBOT_TOKEN",
+        "debug": false,
+        "heartInterval": 30000
+      }
+    ]
+  }
+}

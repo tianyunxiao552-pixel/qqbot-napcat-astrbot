@@ -1,0 +1,8 @@
+name: qq_bilingual_voice
+display_name: 中文文字与日语自动语音
+desc: 按人格先生成日语原句，显示忠实中文译文，并对原句按情绪参考直接配音。
+author: Local
+version: 1.2.1
+support_platforms:
+  - aiocqhttp
+astrbot_version: ">=4.29.1"

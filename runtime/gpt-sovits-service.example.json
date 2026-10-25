@@ -1,0 +1,7 @@
+{
+  "enabled": false,
+  "port": 9880,
+  "python": "D:/QQBot/GPT-SoVITS/runtime/python.exe",
+  "program_dir": "D:/QQBot/GPT-SoVITS",
+  "infer_config": "D:/QQBot/runtime/tts-infer.local.yaml"
+}

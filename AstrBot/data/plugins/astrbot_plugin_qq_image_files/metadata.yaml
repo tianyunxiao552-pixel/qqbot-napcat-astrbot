@@ -1,0 +1,8 @@
+name: qq_image_files
+display_name: QQ 图片附件识图
+desc: 将 QQ 文件消息中的图片交给 AstrBot 原生识图流程，不修改人格或回复内容。
+author: Local
+version: 1.0.0
+support_platforms:
+  - aiocqhttp
+astrbot_version: '>=4.29.1'

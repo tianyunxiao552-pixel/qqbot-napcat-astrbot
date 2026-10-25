@@ -1,0 +1,54 @@
+{
+  "日常平静": {
+    "ref_audio_path": "D:/QQBot/references/01.wav",
+    "prompt_text": "填写这段日语参考音频实际说出的文字"
+  },
+  "温柔亲近": {
+    "ref_audio_path": "D:/QQBot/references/02.wav",
+    "prompt_text": "填写这段日语参考音频实际说出的文字"
+  },
+  "开心喜悦": {
+    "ref_audio_path": "D:/QQBot/references/03.wav",
+    "prompt_text": "填写这段日语参考音频实际说出的文字"
+  },
+  "关心担忧": {
+    "ref_audio_path": "D:/QQBot/references/04.wav",
+    "prompt_text": "填写这段日语参考音频实际说出的文字"
+  },
+  "害羞羞怯": {
+    "ref_audio_path": "D:/QQBot/references/05.wav",
+    "prompt_text": "填写这段日语参考音频实际说出的文字"
+  },
+  "认真坚定": {
+    "ref_audio_path": "D:/QQBot/references/06.wav",
+    "prompt_text": "填写这段日语参考音频实际说出的文字"
+  },
+  "疑惑好奇": {
+    "ref_audio_path": "D:/QQBot/references/07.wav",
+    "prompt_text": "填写这段日语参考音频实际说出的文字"
+  },
+  "憧憬向往": {
+    "ref_audio_path": "D:/QQBot/references/08.wav",
+    "prompt_text": "填写这段日语参考音频实际说出的文字"
+  },
+  "兴奋期待": {
+    "ref_audio_path": "D:/QQBot/references/09.wav",
+    "prompt_text": "填写这段日语参考音频实际说出的文字"
+  },
+  "惊讶": {
+    "ref_audio_path": "D:/QQBot/references/10.wav",
+    "prompt_text": "填写这段日语参考音频实际说出的文字"
+  },
+  "低落悲伤": {
+    "ref_audio_path": "D:/QQBot/references/11.wav",
+    "prompt_text": "填写这段日语参考音频实际说出的文字"
+  },
+  "歉意自责": {
+    "ref_audio_path": "D:/QQBot/references/12.wav",
+    "prompt_text": "填写这段日语参考音频实际说出的文字"
+  },
+  "紧张不安": {
+    "ref_audio_path": "D:/QQBot/references/13.wav",
+    "prompt_text": "填写这段日语参考音频实际说出的文字"
+  }
+}
