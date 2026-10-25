@@ -145,12 +145,19 @@ class QQBilingualVoice(Star):
         except Exception as exc:
             logger.warning("[qq_bilingual_voice] Chinese translation unavailable; original reply was preserved (%s).", type(exc).__name__)
 
-    def synthesis_provider(self, provider, emotion):
-        reference = self.references.get(emotion) or self.references.get(DEFAULT_EMOTION)
-        if reference and isinstance(provider, ProviderGSVTTS):
-            # References belong to this reply, not to the shared provider state.
+    def synthesis_provider(self, provider):
+        reference = self.references.get(DEFAULT_EMOTION)
+        if isinstance(provider, ProviderGSVTTS):
+            # Keep Hotaru's gentle base voice across emotions. Some labelled
+            # references contain emphatic reactions or unfinished phrases.
             selected = copy(provider)
-            selected.default_params = {**provider.default_params, "ref_audio_path": reference["ref_audio_path"], "prompt_text": reference["prompt_text"], "prompt_lang": "all_ja"}
+            selected.default_params = {
+                **provider.default_params,
+                "speed_factor": "0.9",
+                "text_split_method": "cut1",
+            }
+            if reference:
+                selected.default_params.update({"ref_audio_path": reference["ref_audio_path"], "prompt_text": reference["prompt_text"], "prompt_lang": "all_ja"})
             return selected
         return provider
 
@@ -170,11 +177,11 @@ class QQBilingualVoice(Star):
         event.set_extra("_qq_voice_attempted", True)
         try:
             emotion = event.get_extra("_qq_voice_emotion", DEFAULT_EMOTION)
-            selected = self.synthesis_provider(provider, emotion)
+            selected = self.synthesis_provider(provider)
             audio_path = await selected.get_audio(ja)
             if not audio_path or not Path(audio_path).is_file():
                 raise ValueError("TTS did not return an audio file")
             await event.send(MessageChain([Record(file=str(audio_path))]))
-            logger.info("[qq_bilingual_voice] Original Japanese voice sent after the display text (reference: %s).", emotion)
+            logger.info("[qq_bilingual_voice] Original Japanese voice sent (emotion: %s; gentle reference, speed 0.9, cut1).", emotion)
         except Exception as exc:
             logger.warning("[qq_bilingual_voice] Voice unavailable; display text was preserved (%s).", type(exc).__name__)
